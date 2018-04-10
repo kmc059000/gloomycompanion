@@ -7,13 +7,13 @@ index.html
 logic.js
 fonts
 images
-macros.js
 style.css
 ui.js
 util.js
 
 Done:
 cards.js
+macros.js
 modifiers.js
 monster_stats.js
 scenarios.js
