@@ -3,4 +3,8 @@ export default {
     scenario: 1,
     showMonsterModifierDeck: true,
     decks: {},
+    activeDecks: {
+        abilityDecks: [],
+        
+    }
 };

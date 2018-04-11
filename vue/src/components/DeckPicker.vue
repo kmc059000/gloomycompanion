@@ -16,7 +16,7 @@ export default {
     },
     methods: {
         submit() {
-            this.$store.dispatch('setupDecks', { ...this.mutableDecks });
+            this.$store.dispatch('setupDecks', this.mutableDecks.filter(x => x.isSelected));
         },
         applyGlobalLevel() {
             this.mutableDecks.decks = this.mutableDecks.decks.map(x => ({
