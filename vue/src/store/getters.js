@@ -6,5 +6,11 @@ export default {
             showMonsterModifierDeck: state.showMonsterModifierDeck,
         };
     },
+
+    decks(state) {
+        return {
+            decks: state.decks,
+        };
+    },
 };
 

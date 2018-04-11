@@ -1,4 +1,6 @@
-const DECKS = {
+import { flow, map, fromPairs } from 'lodash/fp';
+
+const decks = {
     'Ancient Artillery': { name: 'Ancient Artillery', class: 'Ancient Artillery' },
     'Bandit Archer': { name: 'Bandit Archer', class: 'Archer' },
     'Bandit Guard': { name: 'Bandit Guard', class: 'Guard' },
@@ -36,7 +38,7 @@ const DECKS = {
     'Wind Demon': { name: 'Wind Demon', class: 'Wind Demon' },
 };
 
-const DECK_DEFINITONS =
+const deckDefinitions =
     [
         {
             class: 'Ancient Artillery',
@@ -417,8 +419,19 @@ const DECK_DEFINITONS =
         },
     ];
 
+const DECK_DEFINITONS = flow(
+    map(x => [x.class, x]),
+    fromPairs,
+)(deckDefinitions);
 
-export default {
+const DECKS = flow(
+    map(d => ({
+        ...d,
+        definition: DECK_DEFINITONS[d.class],
+    })),
+)(decks);
+
+export {
     DECKS,
     DECK_DEFINITONS,
 };

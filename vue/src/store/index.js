@@ -5,10 +5,12 @@ import mutations from './mutations';
 import actions from './actions';
 
 export default function createStore() {
-    return new Vuex.Store({
+    const store = new Vuex.Store({
         state,
         getters,
         mutations,
         actions,
     });
+
+    return store;
 }
