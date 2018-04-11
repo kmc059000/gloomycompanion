@@ -23,14 +23,19 @@ export default {
         state.showMonsterModifierDeck = scenario.showMonsterModifierDeck;
 
         // select decks for scenario
-        // todo handle boss definitions
         Object.values(state.decks).forEach((d) => {
             d.isSelected = false;
         });
         const scenarioDef = SCENARIO_DEFINITIONS[state.scenario - 1];
         scenarioDef.decks.forEach((d) => {
-            const deck = state.decks[d.name];
-            deck.isSelected = true;
+            const isBoss = d.name.indexOf('Boss: ') === 0;
+
+            if (!isBoss) {
+                const deck = state.decks[d.name];
+                deck.isSelected = true;
+            } else {
+                // todo handle boss definitions
+            }
         });
     },
 
