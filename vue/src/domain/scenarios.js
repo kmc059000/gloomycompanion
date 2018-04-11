@@ -868,7 +868,7 @@ const SCENARIO_DEFINITIONS = [
 ];
 
 
-export default {
+export {
     SPECIAL_RULES,
     SCENARIO_DEFINITIONS,
 };

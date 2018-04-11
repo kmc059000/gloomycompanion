@@ -28,6 +28,7 @@ export default {
     watch: {
         decks: {
             immediate: true,
+            deep: true,
             handler(val) {
                 this.mutableDecks = cloneDeep(val);
             },
