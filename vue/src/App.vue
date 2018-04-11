@@ -1,19 +1,18 @@
 <template>
     <div id="app">
-        <HelloWorld/>
+        <ScenarioPicker/>
     </div>
 </template>
 
 <script>
-import store from './store';
-import HelloWorld from './components/HelloWorld';
+
+import ScenarioPicker from './components/ScenarioPicker';
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
+        ScenarioPicker,
     },
-    store,
 };
 </script>
 
