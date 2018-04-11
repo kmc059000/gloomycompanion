@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import store from './store';
 import HelloWorld from './components/HelloWorld';
 
 export default {
@@ -12,6 +13,7 @@ export default {
     components: {
         HelloWorld,
     },
+    store,
 };
 </script>
 
